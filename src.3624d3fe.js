@@ -13,4 +13,4 @@ var e;!function(t,n){"object"==typeof exports&&"object"==typeof module?module.ex
 },{"js-datepicker":"SDNX"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/timer"),require("./js/datepicker");
 },{"./sass/main.scss":"clu1","./js/timer":"yCUT","./js/datepicker":"bh2m"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-timer/src.3363a977.js.map
+//# sourceMappingURL=/goit-js-hw-11-timer/src.3624d3fe.js.map
