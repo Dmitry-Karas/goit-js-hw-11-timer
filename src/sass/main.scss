@@ -16,7 +16,7 @@ body {
     url(../images/jdun8.png), url(../images/jdun9.png), url(../images/bg.jpg);
   background-position-x: calc(50% + 460px), calc(50% - 330px), calc(50% + 350px), calc(50% - 520px),
     calc(50% + 160px), calc(50% - 450px), calc(50% - 150px), calc(50% + 500px), 0;
-  background-position-y: 150px, 80px, 30px, 20px, 420px, 200px, 420px, 10px, 0;
+  background-position-y: 150px, 80px, 30px, 20px, 430px, 200px, 420px, 10px, 0;
   background-size: contain, 160px, 120px, 160px, 200px, 350px, 180px, 100px, cover;
   background-repeat: no-repeat;
 }
@@ -145,16 +145,18 @@ body {
   &:hover:not(:disabled) {
     background-color: rgba(27, 202, 21, 0.5);
   }
-  &:active {
+
+  &:active:not(:disabled) {
     transition: none;
     background-color: rgba(27, 202, 21);
   }
 }
 
 .btn--stop {
-  &:hover:not(:disabled) {
+  &:hover {
     background-color: rgba(255, 63, 63, 0.5);
   }
+
   &:active {
     transition: none;
     background-color: rgba(255, 63, 63);
