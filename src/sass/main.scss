@@ -13,11 +13,11 @@ body {
   background-color: #000;
   background-image: url(../images/jdun.png), url(../images/jdun5.png), url(../images/jdun2.png),
     url(../images/jdun1.png), url(../images/jdun4.png), url(../images/jdun6.png),
-    url(../images/bg.jpg);
-  background-position-x: calc(50% + 460px), calc(50% - 330px), calc(50% + 350px), calc(50% - 150px),
-    calc(50% + 160px), calc(50% - 450px), 0;
-  background-position-y: 150px, 80px, 30px, 420px, 420px, 200px, 0;
-  background-size: contain, 150px, 120px, 170px, 200px, 350px, cover;
+    url(../images/jdun8.png), url(../images/jdun9.png), url(../images/bg.jpg);
+  background-position-x: calc(50% + 460px), calc(50% - 330px), calc(50% + 350px), calc(50% - 520px),
+    calc(50% + 160px), calc(50% - 450px), calc(50% - 150px), calc(50% + 500px), 0;
+  background-position-y: 150px, 80px, 30px, 20px, 420px, 200px, 420px, 10px, 0;
+  background-size: contain, 160px, 120px, 160px, 200px, 350px, 180px, 100px, cover;
   background-repeat: no-repeat;
 }
 
@@ -54,8 +54,17 @@ body {
   }
 }
 
-.swal-bg {
+.swal-bg--start {
   background-image: url(../images/jdun3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 300px;
+}
+
+.swal-bg--stop {
+  background-image: url(../images/jdun7.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -65,7 +74,7 @@ body {
 
 .title {
   text-align: center;
-  font-size: 40px;
+  font-size: 44px;
   margin-bottom: 40px;
   color: #fff;
 }
@@ -102,6 +111,12 @@ body {
   font-size: 20px;
   font-weight: 400;
 
+  transition: background-color 250ms ease-out;
+
+  &:disabled {
+    background-color: rgb(255, 255, 255, 0.2);
+  }
+
   &::placeholder {
     color: rgb(165, 185, 198);
   }
@@ -119,10 +134,15 @@ body {
   font-size: 14px;
 
   transition: background-color 250ms ease-out;
+
+  &:disabled {
+    background-color: rgb(255, 255, 255, 0.2);
+    cursor: auto;
+  }
 }
 
 .btn--start {
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: rgba(27, 202, 21, 0.5);
   }
   &:active {
@@ -132,7 +152,7 @@ body {
 }
 
 .btn--stop {
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: rgba(255, 63, 63, 0.5);
   }
   &:active {
