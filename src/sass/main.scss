@@ -5,3 +5,196 @@
 
 // Стили для файла с примером HTML-фрагмента
 // @import './example';
+
+@import '~js-datepicker/src/datepicker';
+
+body {
+  font-family: 'Balsamiq Sans', cursive;
+  background-color: #000;
+  background-image: url(../images/jdun.png), url(../images/jdun5.png), url(../images/jdun2.png),
+    url(../images/jdun1.png), url(../images/jdun4.png), url(../images/jdun6.png),
+    url(../images/bg.jpg);
+  background-position-x: calc(50% + 460px), calc(50% - 330px), calc(50% + 350px), calc(50% - 150px),
+    calc(50% + 160px), calc(50% - 450px), 0;
+  background-position-y: 150px, 80px, 30px, 420px, 420px, 200px, 0;
+  background-size: contain, 150px, 120px, 170px, 200px, 350px, cover;
+  background-repeat: no-repeat;
+}
+
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.swal-modal {
+  border: 4px solid #fff;
+  background-color: #333333;
+}
+
+.swal-text {
+  padding: 24px;
+  border-radius: 4px;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255);
+  font-size: 12px;
+  border: 1px solid rgba(255, 255, 255);
+  color: #333333;
+
+  &:not([disabled]):hover,
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.swal-bg {
+  background-image: url(../images/jdun3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 300px;
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.date-picker__input {
+  margin-right: 50px;
+  padding: 10px;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.datepicker {
+  width: 220px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding: 10px;
+  border: 4px solid #fff;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #fff;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  &::placeholder {
+    color: rgb(165, 185, 198);
+  }
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+
+  background-color: #333333;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+
+  transition: background-color 250ms ease-out;
+}
+
+.btn--start {
+  &:hover {
+    background-color: rgba(27, 202, 21, 0.5);
+  }
+  &:active {
+    transition: none;
+    background-color: rgba(27, 202, 21);
+  }
+}
+
+.btn--stop {
+  &:hover {
+    background-color: rgba(255, 63, 63, 0.5);
+  }
+  &:active {
+    transition: none;
+    background-color: rgba(255, 63, 63);
+  }
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 140px;
+  background-color: #333333;
+  border-radius: 20px;
+  border: 6px solid #fff;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.value {
+  margin-bottom: 10px;
+  font-size: 40px;
+  line-height: 1;
+  color: #fff;
+}
+
+.label {
+  font-size: 14px;
+  color: #fff;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.qs-datepicker-container {
+  font-family: 'Balsamiq Sans', cursive;
+
+  width: 220px;
+  margin-top: 5px;
+  border: 4px solid #fff;
+  background-color: #333333;
+  color: #fff;
+}
+
+.qs-controls {
+  background-color: #555555;
+}
+
+.qs-day {
+  color: rgb(165, 185, 195);
+}
+
+.qs-square:not(.qs-empty):not(.qs-disabled):not(.qs-day):not(.qs-active):hover {
+  background-color: rgb(165, 185, 195);
+}
